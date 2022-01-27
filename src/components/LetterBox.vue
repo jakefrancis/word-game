@@ -9,7 +9,7 @@ export default {
   props: {
     letter: {
         type: String,
-        default: ''
+        default: ' '
     },
     letterState :  {
         type: String,
@@ -24,6 +24,7 @@ export default {
   },
   computed: {
         color: function(){
+           
             if(this.letterState === 'match'){
                 return 'green'
             }
@@ -33,6 +34,7 @@ export default {
             else{
                 return 'grey'
             }
+            
         }
     }
 }
@@ -41,17 +43,25 @@ export default {
 <style scoped>
 div {
   font-size: 2rem;
+  background: lightblue;
+  padding: 5px 10px;
+  border-radius: 10px;
+  width: 1rem;
+  height: 2rem;
 }
 
 .green {
-    color: green;
+    color: #388659;
 }
 
 .yellow{
-    color: yellow;
+    color: #ea9010;
 }
 
 .grey{
-    color: grey;
+    color: #1d201f;
+}
+.light-grey{
+   color: #d1d1d1;
 }
 </style>
