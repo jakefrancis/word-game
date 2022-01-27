@@ -1,15 +1,14 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <WordBox />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import WordBox from './components/WordBox.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    WordBox
   }
 }
 </script>
