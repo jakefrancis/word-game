@@ -1,6 +1,6 @@
 <template>
   <div class='key-container'>
-    <KeyBox @keyPress="$emit('keyPress', letter)" v-for='letter, index in keys' :key='index' :letter='letter' />
+    <KeyBox @keyPress="$emit('keyPress', letter.letter)" v-for='letter, index in keys' :key='index' :letter='letter.letter' :keyState='letter.keyState' />
   </div>
 </template>
 

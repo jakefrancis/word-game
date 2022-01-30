@@ -1,6 +1,6 @@
 <template>
     <div class='wordbox-container'>
-        <LetterBox v-for='letter, index  of guess' :letter='letter' letterState='match' :key='index'/>
+        <LetterBox v-for='obj, index  of guess' :letter='obj.letter' :letterState='obj.state' :key='index'/>
     </div>
 </template>
 
@@ -17,7 +17,6 @@ export default {
       }
     },
     mounted(){
-      console.log(this.guess)
     }
 }
 </script>

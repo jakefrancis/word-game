@@ -1,5 +1,5 @@
 <template>
-  <div @click="$emit('keyPress',this.letter)">
+  <div @click="handleClick" :class='keyState'>
     {{ letter }}
   </div>
 </template>
@@ -10,10 +10,16 @@ export default {
     letter: {
       type: String,
       default: ''
+    },
+    keyState: {
+      type: String,
+      default: 'unknown'
     }
   },
   methods: {
-
+    handleClick(){
+      this.$emit('keyPress',this.letter)
+    }
   }
 }
 </script>
@@ -26,6 +32,16 @@ div {
   border-radius: 10px;
   height: 2rem;
   cursor: pointer;
+}
+
+.unknown{
+  background: #247BA0;
+  color: #d1d1d1;
+}
+
+.wrong{
+  background: #d1d1d1;
+  color: #247BA0;  
 }
 
 
